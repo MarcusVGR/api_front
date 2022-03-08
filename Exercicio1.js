@@ -1,7 +1,8 @@
-let texto = "um dois dois tres tres tres";
+let texto = "um dois dois, tres tres tres.";
 
-// Divide a String por palavras e ordena ela
-let lista = texto.split(" ").sort();
+let textoTratado = texto.replace(/[,.]/g, ""); //retira ponto e vírgula
+
+let lista = textoTratado.split(" ").sort(); //separa por palavra e ordena
 
 // Recebe o push do for com as Strings e quantas vezes ela se repete
 let palavras = [];
