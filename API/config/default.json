@@ -1,0 +1,12 @@
+{
+    "mysql": {
+        "banco_de_dados": "ramp",
+        "usuario": "root",
+        "senha": "password",
+        "host": "127.0.0.1",
+        "porta": "3306"
+    },
+    "api": {
+        "porta": 3000
+    }
+}
