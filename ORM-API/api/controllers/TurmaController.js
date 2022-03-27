@@ -14,7 +14,7 @@ class TurmaController {
   static async pegaUmaTurma(req, res) {
       const { id } = req.params
       try {
-          const umTurma = await database.Turma.findOne({
+          const umTurma = await database.Turmas.findOne({
               where: { id: Number(id) } })
           return res.status(200).json(umTurma)
 
@@ -26,7 +26,7 @@ class TurmaController {
   static async criaTurma(req, res) {
       const novaTurma = req.body
       try{
-          const novaTurmaCriada = await database.Turma.create(novaTurma)
+          const novaTurmaCriada = await database.Turmas.create(novaTurma)
           return res.status(200).json(novaTurmaCriada)
 
       } catch (error) {
@@ -38,8 +38,8 @@ class TurmaController {
       const { id } = req.params
       const novasInfos = req.body
       try {
-          await database.Turma.update(novasInfos, {where: {id: Number(id) }})
-          const turmaAtualizada = await database.Turma.findOne({
+          await database.Turmas.update(novasInfos, {where: {id: Number(id) }})
+          const turmaAtualizada = await database.Turmas.findOne({
               where: { id: Number(id) }})
           return res.status(200).json(turmaAtualizada)
       } catch (error) {
@@ -49,7 +49,7 @@ class TurmaController {
   static async apagaTurma(req, res) {
       const { id } = req.params
       try {
-          await database.Turma.destroy({where: {id: Number(id) }})
+          await database.Turmas.destroy({where: {id: Number(id) }})
           return res.status(200).json({mensagem: `Turma do idi ${id} apagado`})
       } catch (error) {
           return res.status(500).json(error.message)
