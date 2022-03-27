@@ -10,13 +10,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
-      {
-        status: 'confirmado',
-        docente_id: 2,
-        turma_id: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      }
     ], {});
   },
 
