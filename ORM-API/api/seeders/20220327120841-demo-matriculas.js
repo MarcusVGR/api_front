@@ -4,8 +4,8 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Matriculas', [
       {
-        status: 'confirmado',
         aluno_id: 1,
+        status: 'confirmado',
         turma_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
